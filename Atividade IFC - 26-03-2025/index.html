@@ -146,6 +146,43 @@
       </section>
       <section>
         <h2>Fale Conosco</h2>
+        <form action="#">
+          <p>
+            <label for="nome">Nome (obrigatório):</label>
+            <input type="text" required placeholder="Nome completo" id="nome" />
+          </p>
+          <p>
+            <label for="email">Email (obrigatório):</label>
+            <input type="email" required placeholder="Email" id="email" />
+          </p>
+          <p>
+            <label for="telefone">Número de telefone (obrigatório):</label>
+            <input
+              type="tel"
+              required
+              placeholder="(XX) XXXXX-XXXX"
+              id="telefone"
+            />
+          </p>
+          <p>
+            <label for="arquivo">Arquivo</label>
+            <input type="file" id="arquivo" />
+          </p>
+          <p>
+            <label for="mensagem">Mensagem (obrigatório):</label>
+            <textarea
+              placeholder="Escreva aqui sua mensagem"
+              required
+              id="mensagem"
+            ></textarea>
+          </p>
+          <fieldset>
+            <legend>Deseja se inscrever em nossa newsletter?</legend>
+            <label><input name="newsletter" type="radio" />Sim</label
+            ><label><input name="newsletter" type="radio" />Não</label>
+          </fieldset>
+          <button type="submit">Enviar</button>
+        </form>
       </section>
     </main>
     <footer>
