@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste de Forms</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Formulário de contato</h1>
+        <form action="#">
+          <p>
+            <label for="nome">*Nome: </label>
+            <input required type="text" id="nome" />
+          </p>
+          <p>
+            <label for="email">*Email: </label>
+            <input required type="email" id="email" />
+          </p>
+          <p>
+            <label for="telefone">*Telefone: </label>
+            <input required type="tel" id="telefone" />
+          </p>
+          <p>
+            <label for="setor">Setor: </label>
+            <select id="setor">
+              <option value="vendas">Vendas</option>
+              <option value="financeiro">Financeiro</option>
+              <option value="administrativo">Administrativo</option>
+            </select>
+          </p>
+          <p>
+            <label for="mensagem">Mensagem: </label>
+            <textarea id="mensagem" cols="30" rows="10"></textarea>
+          </p>
+          <fieldset>
+            <legend>Comunicação urgente:</legend>
+            <label> <input type="radio" name="urgente" value="sim" />Sim</label
+            ><label>
+              <input type="radio" name="urgente" value="não" />Não</label
+            >
+          </fieldset>
+          <fieldset>
+            <legend>Obtive conhecimento do projeto:</legend>
+            <label>
+              <input
+                type="checkbox"
+                value="buscador"
+                name="conhecimento"
+              />Buscador
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="publicidade"
+                name="conhecimento"
+              />Publicidade em vídeo
+            </label>
+            <label>
+              <input type="checkbox" value="amigos" name="conhecimento" />Amigos
+            </label>
+            <label>
+              <input type="checkbox" value="email" name="conhecimento" />
+              Email
+            </label>
+            <label>
+              <input type="checkbox" value="outros" name="conhecimento" />Outros
+            </label>
+          </fieldset>
+          <p>
+            <button type="reset">LIMPAR</button>
+            <button type="submit">ENVIAR</button>
+          </p>
+        </form>
+      </section>
+      <section>
+        <h1>Cadastro de Projetos</h1>
+        <form action="#">
+          <p>
+            <label for="titulo">*Título do projeto: </label>
+            <input required type="text" id="nome" />
+          </p>
+          <p>
+            <label for="coordenador">*Coordenador do projeto: </label>
+            <input required type="text" id="nome" />
+          </p>
+          <p>
+            <label for="orcamento">*Previsão de orçamento: R$</label>
+            <input required type="number" id="orcamento" />
+          </p>
+          <p>
+            <label for="incio">*Data de início: </label>
+            <input required type="date" id="incio" />
+          </p>
+          <p>
+            <label rerquired for="final">*Data de término: </label>
+            <input type="date" id="final" />
+          </p>
+          <p>
+            <label for="duracao">Tempo de duração: </label>
+            <select id="duracao">
+              <option value="trimestral">Trimestral</option>
+              <option value="semestral">Semestral</option>
+              <option value="anual">Anual</option>
+            </select>
+          </p>
+          <fieldset>
+            <legend>Objetivos de desenvolvimento sustentável:</legend>
+            <label>
+              <input type="checkbox" value="pobreza" name="ods" />Erradicação da
+              pobreza
+            </label>
+            <label>
+              <input type="checkbox" value="fome" name="ods" />Fome zero e
+              agricultura sustentável
+            </label>
+            <label>
+              <input type="checkbox" value="saude" name="ods" />Saúde e
+              bem-estar
+            </label>
+            <label>
+              <input type="checkbox" value="genero" name="ods" />
+              Igualdade de gênero
+            </label>
+            <label>
+              <input type="checkbox" value="agua" name="ods" /> Água potável e
+              saneamento
+            </label>
+            <label>
+              <input type="checkbox" value="energia" name="ods" /> Energia
+              acessível e limpa
+            </label>
+            <label>
+              <input type="checkbox" value="trabalho" name="ods" /> Trabalho
+              decente e crescimento econômico
+            </label>
+            <label>
+              <input type="checkbox" value="desigualdades" name="ods" /> Redução
+              das desigualdades
+            </label>
+            <label>
+              <input type="checkbox" value="cidades" name="ods" /> Cidades e
+              comunidades sustentáveis
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Nível de impacto</legend>
+            <label>
+              <input
+                type="radio"
+                name="impacto"
+                value="regional"
+              />Regional</label
+            ><label>
+              <input
+                type="radio"
+                name="impacto"
+                value="nacional"
+              />Nacional</label
+            >
+          </fieldset>
+          <p>
+            <label>
+              <input type="checkbox" name="receber_email" value="sim" />Desejo
+              receber notificações por email sobre outras chamadas</label
+            >
+          </p>
+          <p>
+            <button type="reset">LIMPAR</button>
+            <button type="submit">ENVIAR</button>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
