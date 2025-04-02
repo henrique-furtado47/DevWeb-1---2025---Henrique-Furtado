@@ -220,6 +220,58 @@
           </video>
         </p>
       </section>
+      <section id="formulario">
+        <h2>Inscreva-se em nossas atividades</h2>
+        <form action="#">
+          <p>
+            <label for="nome">*Nome completo </label>
+            <input type="text" id="nome" placeholder="nome" required />
+          </p>
+          <p>
+            <label for="email"></label>
+            *Email
+            <input type="email" id="email" placeholder="email" required />
+          </p>
+          <p>
+            <label for="cpf">*CPF (somente números) </label
+            ><input type="number" id="cpf" placeholder="cpf" required />
+          </p>
+          <p>
+            <label for="telefone">*Celular (somente números) </label
+            ><input
+              type="number"
+              id="telefone"
+              placeholder="telefone celular"
+              required
+            />
+          </p>
+          <p>
+            <label for="nascimento">*Data de nascimento </label>
+            <input type="date" id="nascimento" />
+          </p>
+          <p>
+            <label for="atividade">Atividade: </label>
+            <select id="atividade">
+              <option value="1">Oficina teatro de bonecos</option>
+              <option value="2">Teatro de sombras</option>
+              <option value="3">Interpretação viva</option>
+            </select>
+          </p>
+          <fieldset>
+            <legend>Necessita de equipamento especializado:</legend>
+            <label
+              ><input type="radio" name="equipamento" value="1" />Sim</label
+            >
+            <label
+              ><input type="radio" name="equipamento" value="2" />Não</label
+            >
+          </fieldset>
+          <p>
+            <label for="observacoes">Observações: </label>
+            <textarea id="observacoes"></textarea>
+          </p>
+        </form>
+      </section>
     </main>
   </body>
 </html>
