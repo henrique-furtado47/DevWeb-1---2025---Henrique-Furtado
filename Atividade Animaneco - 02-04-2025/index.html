@@ -6,13 +6,13 @@
     <title>Atividade Animaneco</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <img src="src/images/banner.jpg" alt="banner animaneco" />
       <h1>Festival Internacional de Teatro de Bonecos</h1>
       <a href="https://linktr.ee/animaneco">Visite nosso linktree:</a>
     </header>
     <main>
-      <section id="progamacao">
+      <section id="programacao">
         <h2>Programação Resumida</h2>
         <h3>Joinville</h3>
         <ol>
@@ -68,7 +68,7 @@
           compromisso social. Venha prestigiar e vivenciar momentos
           inesquecíveis no Animaneco!
         </p>
-        <h3>Espetáculo (Velhos) Viejos</h3>
+        <h3 id="velhos">Espetáculo (Velhos) Viejos</h3>
         <p>
           Velhos é o primeiro espetáculo da trilogia sobre a velhice. Os 8
           personagens são bonecos de diferentes técnicas e tamanhos. Desde
@@ -87,7 +87,7 @@
         </p>
         <p><strong>Classificação indicativa: 14 anos</strong></p>
         <img src="src/images/esp-velhos.jpg" alt="foto do espetaculo velho" />
-        <h3>Entre Mundos</h3>
+        <h3 id="entreMundos">Entre Mundos</h3>
         <p>
           Entre mundos é um espetáculo com máscaras teatrais, sem utilização de
           palavras, e propõe uma experiência sensorial para o público infantil.
@@ -111,14 +111,12 @@
         <p>
           <img
             src="src/images/entre-mundos.jpg"
-            alt="foto do espetaculo entre mundos"
-          />
+            alt="foto do espetaculo entre mundos" />
         </p>
         <p>
           <img
             src="src/images/disp-audio.png"
-            alt="disponivel para audio descrição"
-          />
+            alt="disponivel para audio descrição" />
         </p>
         <h3>
           <a
@@ -131,7 +129,7 @@
         <h2>Edições Passadas</h2>
         <ul>
           <li>
-            <h4>1º Animaneco</h4>
+            <h4 id="1animaneco">1º Animaneco</h4>
             <p>
               O 1º ANIMANECO Festival de Teatro de Bonecos de Joinville, nasceu
               em 2017 e em sua primeira edição reuniu colaborativamente 8 Cias
@@ -144,12 +142,11 @@
             <p>
               <img
                 src="src/images/primeiro-animaneco.jpg"
-                alt="primeiro animaneco"
-              />
+                alt="primeiro animaneco" />
             </p>
           </li>
           <li>
-            <h4>2º Animaneco</h4>
+            <h4 id="2animaneco">2º Animaneco</h4>
             <p>
               Devido ao sucesso da primeira edição, no ano seguinte o festival
               contou com mais espetáculos e também dias de apresentações
@@ -166,12 +163,11 @@
             <p>
               <img
                 src="src/images/segundo-animaneco.jpg"
-                alt="segundo animaneco"
-              />
+                alt="segundo animaneco" />
             </p>
           </li>
           <li>
-            <h4>3º Animaneco</h4>
+            <h4 id="3animaneco">3º Animaneco</h4>
             <p>
               Devido ao sucesso da primeira edição, no ano seguinte o festival
               contou com mais espetáculos e também dias de apresentações
@@ -188,8 +184,7 @@
             <p>
               <img
                 src="src/images/terceiro-animaneco.jpg"
-                alt="terceiro animaneco"
-              />
+                alt="terceiro animaneco" />
             </p>
           </li>
         </ul>
@@ -242,8 +237,7 @@
               type="number"
               id="telefone"
               placeholder="telefone celular"
-              required
-            />
+              required />
           </p>
           <p>
             <label for="nascimento">*Data de nascimento </label>
@@ -268,10 +262,105 @@
           </fieldset>
           <p>
             <label for="observacoes">Observações: </label>
+          </p>
+          <p>
             <textarea id="observacoes"></textarea>
+          </p>
+          <label
+            ><input type="checkbox" value="1" id="notificacoes" />Desejo receber
+            notificações por email sobre outras chamadas</label
+          >
+          <p>
+            <button type="reset">LIMPAR CAMPOS</button
+            ><button type="submit">FINALIZAR INSCRIÇÃO</button>
           </p>
         </form>
       </section>
+      <section id="reservas">
+        <h2>Reserve seu ingresso clicando no link das imagens</h2>
+        <ul>
+          <li>
+            <h3>Oficina - Iluminação para o Teatro Lambe-lambe</h3>
+            <a href="https://www.enjoyticket.com.br/index.php?pg=evento&id=150">
+              <img
+                src="src/images/oficina-lambemebe.png"
+                alt="imagem da oficina lambe lambe"
+            /></a>
+          </li>
+          <li>
+            <h3>Maria Peçonha</h3>
+            <a href="https://www.enjoyticket.com.br/index.php?pg=evento&id=125">
+              <img src="src/images/maria-peconha.png" alt="Maria peçonha"
+            /></a>
+          </li>
+          <li>
+            <h3>Abertura de Malas - Mamulengo Fuzuê</h3>
+            <a href="https://www.enjoyticket.com.br/index.php?pg=evento&id=142">
+              <img
+                src="src/images/abertura-malas.png"
+                alt="imagem da abertura de malas"
+            /></a>
+          </li>
+        </ul>
+        <p>
+          Para mais espetáculos acesse o
+          <a href="https://www.enjoyticket.com.br/">enjoyticket</a>
+        </p>
+      </section>
+      <section id="mapa">
+        <h2>Mapa do Site</h2>
+        <ol>
+          <li><a href="#programacao">Programação Resumida</a></li>
+          <li>
+            <a href="#espetaculos">Espetáculos</a>
+            <ol>
+              <li>
+                <a href="#velhos">Espetáculo (Velhos) Viejos</a>
+              </li>
+              <li>
+                <a href="#entreMundos">Entre Mundos</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#edicoes">Edições Passadas</a>
+            <ol>
+              <li>
+                <a href="#1animaneco"> 1º Animaneco</a>
+              </li>
+              <li>
+                <a href="#2animaneco"> 2º Animaneco</a>
+              </li>
+              <li>
+                <a href="#3animaneco"> 3º Animaneco</a>
+              </li>
+            </ol>
+          </li>
+          <li><a href="#videos">Vídeos</a></li>
+          <li><a href="#formulario">Inscreva-se em nossas atividades</a></li>
+          <li><a href="#reservas">Reserve seu ingresso</a></li>
+        </ol>
+      </section>
     </main>
+    <footer>
+      <p>
+        <a href="https://www.facebook.com/animanecojoinville/?locale=pt_BR"
+          ><img
+            src="src/images/social-icon/facebook.png"
+            alt="logo do facebook"
+        /></a>
+        |
+        <a href="https://www.instagram.com/animanecojoinville/"
+          ><img
+            src="src/images/social-icon/instagram.png"
+            alt="logo do instagram"
+        /></a>
+      </p>
+      <p>
+        <a href="#header">Voltar para o topo</a>
+      </p>
+      <p>Copyright &copy; 2025 - Alguns direitos reservados</p>
+      <p>Desenvolvido por Henrique Furtado</p>
+    </footer>
   </body>
 </html>
