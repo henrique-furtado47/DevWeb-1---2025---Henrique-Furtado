@@ -2,6 +2,9 @@
                                 GERAL   
    ============================================================================================                            
 */
+html {
+  font-size: calc(15px + 0.390625vw);
+}
 
 body {
   color: #21243d;
@@ -14,6 +17,10 @@ a {
   color: #21243d;
 }
 
+p {
+  line-height: 130%;
+}
+
 /* ============================================================================================
                                 ESPECÍFICO   
    ============================================================================================                            
@@ -22,4 +29,52 @@ a {
 header ul li {
   text-align: center;
   padding: 10px 0 10px 0;
+}
+
+section.banner {
+  text-align: center;
+  padding: 0 5% 0 5%;
+}
+
+section.banner h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 10px 0 10px 0;
+}
+
+section.banner p button {
+  background: #ff6464;
+  border: none;
+  color: #ffffff;
+  display: inline-block;
+  margin: 10px 0 50px;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.5rem;
+}
+
+section.posts {
+  background: #edf7fa;
+  padding: 10px;
+}
+
+section.posts h2 {
+  text-align: center;
+  margin: 15px;
+}
+
+section.posts ul li {
+  background: white;
+  padding: 15px;
+  margin: 12px 10px 12px 10px;
+}
+
+section.posts ul li h3 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 0 0 15px;
+}
+
+section.posts ul li p {
+  font-size: 1rem;
+  margin: 15px 0px 15px 0px;
 }
