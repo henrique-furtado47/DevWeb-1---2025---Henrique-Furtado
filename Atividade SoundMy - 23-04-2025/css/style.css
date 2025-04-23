@@ -40,7 +40,7 @@ section p {
   margin: 10px 0 10px 0;
 }
 /* ============================================================================================
-                                ESPECIFICO   
+                                FOOTER E HEADER   
    ============================================================================================                            
 */
 header {
@@ -48,19 +48,40 @@ header {
   padding: 10px 0 10px 0;
   margin: 0 0 20vw 0;
 }
-
-header h1 {
+footer {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  background: #cbe4de;
+}
+header h1,
+footer span {
   padding: 10px 0 10px 0;
   font-weight: bold;
   font-size: 2rem;
 }
 
-header ul li {
+header ul li,
+footer ul li {
   text-align: center;
   padding: 10px 0 10px 0;
   font-size: 1.2rem;
 }
 
+footer p {
+  color: #888;
+  margin: 30px 0 30px 0;
+  font-size: 1.2rem;
+}
+
+footer ul li a {
+  padding: 10px 0 10px 0;
+  font-size: 1.2rem;
+  color: #888888;
+}
+/* ============================================================================================
+                                ESPECIFICO   
+   ============================================================================================                            
+*/
 section.register {
   text-align: center;
   margin: 0 0 20vw 0;
@@ -70,6 +91,7 @@ section.products {
   text-align: center;
   background: #cbe4de;
   padding: 10px;
+  margin: 0 0 20vw 0;
 }
 
 section.products ul li {
@@ -83,10 +105,30 @@ section.products ul li h2 {
   font-weight: bold;
   font-size: 1.2rem;
 }
+
 section.products ul li span {
   background: #efefef;
+  color: #888888;
   font-size: 2.5rem;
   padding: 15px;
   border-radius: 100%;
   margin: 10px;
+}
+
+section.build {
+  text-align: center;
+  margin: 0 0 20vw 0;
+}
+
+section.build div {
+  margin: 5vw 0 0 0;
+}
+section.build div h2 {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+}
+
+section.build div p {
+  font-size: 1rem;
 }
