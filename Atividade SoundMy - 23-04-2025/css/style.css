@@ -1,0 +1,92 @@
+/* ============================================================================================
+                                GERAL   
+   ============================================================================================                            
+*/
+html {
+  font-size: calc(15px + 0.390625vw);
+}
+
+body {
+  font-family: Comfortaa;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  font-family: Comfortaa;
+  background-color: #0e8388;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 8px;
+  font-size: 1.1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 0 10px 0;
+}
+
+section p {
+  color: #888888;
+  margin: 10px 0 10px 0;
+}
+/* ============================================================================================
+                                ESPECIFICO   
+   ============================================================================================                            
+*/
+header {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  margin: 0 0 20vw 0;
+}
+
+header h1 {
+  padding: 10px 0 10px 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+header ul li {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  font-size: 1.2rem;
+}
+
+section.register {
+  text-align: center;
+  margin: 0 0 20vw 0;
+}
+
+section.products {
+  text-align: center;
+  background: #cbe4de;
+  padding: 10px;
+}
+
+section.products ul li {
+  background: white;
+  border-radius: 15px;
+  margin: 25px;
+  padding: 10px;
+}
+
+section.products ul li h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+section.products ul li span {
+  background: #efefef;
+  font-size: 2.5rem;
+  padding: 15px;
+  border-radius: 100%;
+  margin: 10px;
+}
