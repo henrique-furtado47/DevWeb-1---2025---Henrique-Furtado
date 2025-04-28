@@ -132,3 +132,51 @@ section.build div h2 {
 section.build div p {
   font-size: 1rem;
 }
+
+@media (min-width: 900px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 6vw;
+  }
+  header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+}
+
+section.products ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5vw 7vw;
+}
+
+section.products ul li {
+  width: 25%;
+  margin: 10px;
+}
+
+section.build {
+  margin: 0 0 10vw 0;
+  padding: 5vw;
+}
+section.build > div {
+  display: flex;
+}
+section.build > div .texto {
+  padding: 5vw;
+}
+footer {
+  display: flex;
+  padding: 2vw;
+  justify-content: space-between;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  display: inline-block;
+  margin: 0 20px;
+  text-align: right;
+}
