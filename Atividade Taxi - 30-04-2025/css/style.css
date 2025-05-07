@@ -29,7 +29,9 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: #252b42;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 p {
@@ -40,6 +42,9 @@ img {
   max-width: 100%;
 }
 
+section {
+  padding: 10vw 8vw;
+}
 /* ======================================================HEADER=================================================================*/
 
 header {
@@ -55,6 +60,10 @@ a.logo {
   align-items: center;
   justify-content: center;
 }
+
+a.logo img {
+  margin: 0 5px 0 0;
+}
 a.login {
   color: #fbbc05;
 }
@@ -66,13 +75,51 @@ a.get-started {
   border-radius: 8px;
 }
 
+/* ======================================================ESPECIFICO=================================================================*/
+section.banner {
+  background: url(../src/image/celular.png) no-repeat right,
+    url(../src/image/fundo.png),
+    linear-gradient(rgba(225, 244, 255, 0.6), rgba(255, 244, 255, 0.6));
+  background-size: auto 100%;
+}
+section.banner h2 {
+  width: 30%;
+  line-height: 140%;
+}
+section.banner p {
+  margin: 40px 0;
+}
+
+section.banner p.text {
+  width: 50%;
+}
+
+section.banner p button {
+  background: #292542;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  padding: 15px 20px;
+  border: none;
+  margin: 5px;
+}
+
+section.ready {
+  text-align: center;
+}
+
+section.ready p {
+  margin: 20px 0;
+}
+/* ======================================================PC=================================================================*/
+
 @media (min-width: 1024px) {
   header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  header nav ul {
+  header nav > ul {
     display: flex;
     align-items: center;
   }
@@ -80,10 +127,26 @@ a.get-started {
     margin: 0px 10px 0px 10px;
   }
 
+  header nav ul ul {
+    display: none;
+  }
+
+  header nav ul li:hover ul {
+    display: block;
+    position: absolute;
+  }
+  header nav ul ul li {
+    margin: 5px 0 5px 0;
+  }
+
   h1 {
     font-size: 1rem;
   }
   a {
     font-size: 1rem;
+  }
+
+  section.ready div {
+    display: flex;
   }
 }
