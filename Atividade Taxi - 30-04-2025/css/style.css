@@ -110,6 +110,28 @@ section.ready {
 
 section.ready p {
   margin: 20px 0;
+  width: 40%;
+  display: block;
+}
+
+section.ready div.texto-meio {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2vw 0;
+}
+
+section.ready ul li {
+  text-align: left;
+}
+section.ready ul li span {
+  background: #e1f4ff;
+  color: #fbbc05;
+  font-size: 3rem;
+  padding: 10px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 10px;
+  text-align: center;
 }
 /* ======================================================PC=================================================================*/
 
@@ -148,5 +170,12 @@ section.ready p {
 
   section.ready div {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.ready ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 10vw;
   }
 }
