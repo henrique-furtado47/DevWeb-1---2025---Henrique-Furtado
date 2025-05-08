@@ -50,7 +50,7 @@ button {
   font-family: "Cabin", sans-serif;
   border-style: none;
 }
-/* ======================================================HEADER=================================================================*/
+/* ======================================================HEADER E FOOTER=================================================================*/
 
 header {
   text-align: center;
@@ -79,7 +79,39 @@ a.get-started {
   padding: 12px;
   border-radius: 8px;
 }
+footer {
+  margin: 20vw 0 0 0;
+}
+footer div.half {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10vw;
+}
 
+footer div.half p.social-media {
+  margin: 20px 0 0 0;
+}
+
+footer div.half p.social-media a {
+  color: #fbbc05;
+  margin: 0 10px 0 0;
+}
+
+footer div.features h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+footer div.features ul li {
+  margin: 20px 0 0 0;
+}
+
+footer div.copyright {
+  background: #e1f4ff;
+  text-align: center;
+  padding: 30px 0 30px 0;
+  margin-top: 20px;
+}
 /* ======================================================ESPECIFICO=================================================================*/
 section.banner {
   background: url(../src/image/celular.png) no-repeat right,
@@ -170,43 +202,62 @@ section.download div.container p {
   width: 40%;
 }
 
-section.services div.container {
+section.services .container {
   display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.text-area p {
+  font-size: 1rem;
+  color: gray;
+}
+.text-area {
+  flex: 1;
+  min-width: 250px;
 }
 
-section.services div.container ul {
-  display: flex;
-  margin: 0 0 0 10vw;
-  width: 25%;
+ul.service-cards {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  min-width: 300px;
 }
-section.services div.container h2 {
-  font-size: 2.3rem;
+
+.text-area h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 1rem;
 }
-section.services div.container ul li {
+
+ul.service-cards li {
   background: #f6f6f6;
+  padding: 2rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
-section.services div.container ul li h3 {
+ul.service-cards li h3 {
+  font-size: 1.3rem;
   color: black;
-  font-weight: bold;
-  font-size: 2rem;
-  margin: 20px 0 0 0;
-  padding: 20px 0 0 20px;
-}
-
-section.services div.container ul li p {
-  color: black;
-  margin: 20px 0 80px 0;
-  padding: 20px 0 0 20px;
+  margin-bottom: 1rem;
 }
 
 section.services div.container ul li p {
   color: black;
   margin: 20px 0 80px 0;
-  padding: 20px 0 20px 20px;
+  padding: 20px 0 0 20px;
+}
+ul.service-cards li p {
+  color: black;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 section.services div.container ul li span {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 section.services div.container ul li span#click {
@@ -217,11 +268,94 @@ section.services div.container ul li:hover span#click {
   display: inline;
   color: black;
   padding: 0 0 0 90%;
+  margin-bottom: 1rem;
 }
 section.services div.container ul li:hover {
   background: #fad007;
   cursor: pointer;
 }
+
+section.contact {
+  padding: 4rem 10%;
+  background-color: #fff;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+}
+section.contact h2 {
+  margin-bottom: 3vw;
+}
+
+section.contact p {
+  margin-bottom: 10vw;
+  color: black;
+}
+
+section.contact .form-map {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+section.contact .form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.contact .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+section.contact input,
+section.contact textarea {
+  flex: 1 1 45%;
+  padding: 12px;
+  border-bottom: 1px solid #fad007;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Cabin", sans-serif;
+}
+
+section.contact input::placeholder,
+section.contact textarea::placeholder {
+  color: #000;
+  opacity: 1;
+}
+section.contact textarea {
+  flex: 1 1 100%;
+  resize: vertical;
+}
+
+section.contact button {
+  padding: 14px 28px;
+  background-color: #fbbc05;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+  transition: background 0.3s ease;
+}
+
+section.contact button:hover {
+  background-color: #e0a800;
+}
+
+section.contact .mapa {
+  flex: 1;
+  min-height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 /* ======================================================PC=================================================================*/
 
 @media (min-width: 1024px) {
