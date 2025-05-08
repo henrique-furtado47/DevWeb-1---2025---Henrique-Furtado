@@ -144,8 +144,7 @@ section.download .container {
   background-color: #fbbc05;
   background-image: url(../src/image/celular.png), url(../src/image/celular.png);
   background-repeat: no-repeat, no-repeat;
-  background-position: top 0 right 0, bottom right;
-  background-size: 120px, 260px;
+  background-position: 60% 5500%, 110% -4000%;
   padding: 5rem 2rem; /* padding lateral menor para deixar os celulares encostarem melhor */
   border-radius: 24px;
   border: 1px solid black;
@@ -168,6 +167,60 @@ section.download div.container h2 {
 
 section.download div.container p {
   color: white;
+  width: 40%;
+}
+
+section.services div.container {
+  display: flex;
+}
+
+section.services div.container ul {
+  display: flex;
+  margin: 0 0 0 10vw;
+  width: 25%;
+}
+section.services div.container h2 {
+  font-size: 2.3rem;
+}
+section.services div.container ul li {
+  background: #f6f6f6;
+}
+
+section.services div.container ul li h3 {
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 20px;
+}
+
+section.services div.container ul li p {
+  color: black;
+  margin: 20px 0 80px 0;
+  padding: 20px 0 0 20px;
+}
+
+section.services div.container ul li p {
+  color: black;
+  margin: 20px 0 80px 0;
+  padding: 20px 0 20px 20px;
+}
+section.services div.container ul li span {
+  font-size: 2rem;
+}
+
+section.services div.container ul li span#click {
+  display: none;
+}
+
+section.services div.container ul li:hover span#click {
+  display: inline;
+  color: black;
+  padding: 0 0 0 90%;
+}
+section.services div.container ul li:hover {
+  background: #fad007;
+  cursor: pointer;
 }
 /* ======================================================PC=================================================================*/
 
