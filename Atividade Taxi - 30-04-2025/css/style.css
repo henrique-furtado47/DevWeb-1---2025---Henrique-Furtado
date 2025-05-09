@@ -268,8 +268,8 @@ section.services div.container ul li span#click {
 section.services div.container ul li:hover span#click {
   display: inline;
   color: black;
-  padding: 0 0 0 90%;
-  margin-bottom: 1rem;
+  padding: 0 0 0 12rem;
+  position: absolute;
 }
 section.services div.container ul li:hover {
   background: #fad007;
