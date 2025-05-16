@@ -1,0 +1,192 @@
+/*=============================================================
+                  GERAL
+==============================================================*/
+
+html {
+  font-size: calc(15px + 0.390625vw); /*responsividade da fonte*/
+}
+
+body {
+  font-family: "urbanist", "sans-serif";
+  color: #343f52;
+}
+
+header {
+  margin: 2rem 6rem;
+}
+
+main,
+footer {
+  margin: 0 6rem;
+}
+
+button {
+  border: none;
+  font-family: "urbanist", "sans-serif";
+  color: white;
+  background: linear-gradient(#f857a6, #ef3f6e);
+  padding: 20px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+/*=============================================================
+                  HEADER E FOOTER
+==============================================================*/
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+header nav ul li {
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+footer a,
+footer p {
+  color: #60697b;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+footer ul {
+  text-align: right;
+}
+footer ul li {
+  margin: 20px 10px 20px 0;
+}
+/*=============================================================
+                  ESPECÍFICO
+==============================================================*/
+section.join,
+section.explore {
+  background: linear-gradient(#e4f1fe, #e6f1fe, #fad8f6);
+  border-radius: 16px;
+  padding: 5rem;
+  margin-bottom: 10vw;
+}
+
+section.explore h2 {
+  font-size: 1.6rem;
+  color: #343f52;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  line-height: 2rem;
+}
+
+section.explore h2 span {
+  color: #ef3f6e;
+}
+
+section.explore p {
+  color: #60697b;
+  margin: 0 0 2rem 0;
+}
+section.join,
+section.case {
+  text-align: center;
+  margin: 10vw 0;
+}
+section.join h1,
+section.case h1 {
+  color: #ef3f6e;
+  font-weight: bold;
+  margin: 0 0 2rem 0;
+}
+
+section.join h2,
+section.case h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0 0 2rem 0;
+}
+
+section.case ul li {
+  margin: 20px;
+}
+
+section.case ul li h3 {
+  margin: 1rem 0 0 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+section.case ul li p {
+  margin: 1rem 0 0 20px;
+  color: #aab0bc;
+  text-align: left;
+  font-size: 0.7rem;
+}
+
+section.case ul li div {
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  /*=============================================================
+                  HEADER E FOOTER
+==============================================================*/
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav ul {
+    display: flex;
+  }
+
+  header nav ul li {
+    margin: 0 20px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer nav ul {
+    display: flex;
+  }
+
+  /*=============================================================
+                  ESPECÍFICO
+==============================================================*/
+
+  section.explore {
+    background: url(../src/images/carinha.png) no-repeat 90%,
+      linear-gradient(rgba(228, 241, 254, 0.548), #e6f1fe8c, #fad8f681);
+    background-size: auto 100%;
+  }
+
+  section.explore h2 {
+    width: 40%;
+  }
+  section.explore p {
+    width: 40%;
+  }
+
+  section.case ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
