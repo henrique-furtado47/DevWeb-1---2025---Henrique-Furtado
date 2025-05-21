@@ -43,15 +43,15 @@
             </select>
           </div>
           </p>
-          <p>
+          <p class="botao">
             <button type="submit">Reservar</button>
           </p>
         </form>
         <p>Você ainda não será cobrado</p>
         <ul>
           <li>
-            <span>R$620 x 5 noites</span>
-            <span>R$3.100</span>
+            <span id="subtotal">R$620 x 5 noites</span>
+            <span id="valor_sub">R$3.100</span>
           </li>
           <li>
             <span>Taxa de limpeza</span>
@@ -62,5 +62,22 @@
         </ul>
       </section>
     </main>
+    <script>
+      let checkout = document.getElementById('checkout');
+      let checkin = document.getElementById('checkin');
+      checkout.addEventListener("change", function(){
+        let data_saida = new Date(this.value);
+        let data_entrada =  new Date(checkin.value);
+        let diaria = (data_saida - data_entrada)/86400000
+        let preco = diaria*620
+        
+        let subtotal = document.getElementById('subtotal');
+        subtotal.innerText = "R$620 x " + diaria + " noites" 
+           
+        let valor_sub = document.getElementById('valor_sub');
+        valor_sub.innerText = "R$" + preco})
+           ;
+     
+    </script>
   </body>
 </html>
