@@ -11,7 +11,10 @@
     <main>
       <section>
         <form action="">
-          <h1>R$620<span class="pequeno">noite</span></h1>
+          <h1>
+            <span id="valor_noite">R$620</span
+            ><span class="pequeno">noite</span>
+          </h1>
           <div class="todos">
             <div class="datas">
               <div class="esq">
@@ -78,17 +81,19 @@
       <script>
         let reserva = document.getElementById("reserva");
         let checkout = document.getElementById("checkout");
-
+        let valor_noite = 700;
+        let valor_noitehtml = document.getElementById("valor_noite");
+        valor_noitehtml.innerText = "R$" + valor_noite;
         checkout.addEventListener("change", function () {
           let data_saida = new Date(this.value);
           let data_entrada = new Date(document.getElementById("checkin").value);
           let diarias = (data_saida - data_entrada) / 86400000;
 
           let subtotal = document.getElementById("subtotal");
-          subtotal.innerText = "R$620 X " + diarias + " noites";
+          subtotal.innerText = "R$" + valor_noite + " X " + diarias + " noites";
 
           let valorsub = document.getElementById("valorsub");
-          valorsub.innerText = "R$" + 620 * diarias;
+          valorsub.innerText = "R$" + valor_noite * diarias;
         });
       </script>
     </main>
