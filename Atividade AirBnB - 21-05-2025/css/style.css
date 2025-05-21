@@ -1,0 +1,68 @@
+/*=============================================================
+                  GERAL
+==============================================================*/
+
+html {
+  font-size: calc(15px + 0.390625vw); /*responsividade da fonte*/
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  justify-content: center;
+  background: lightgray;
+}
+
+section.form {
+  margin: 10vw;
+  background-color: white;
+  border: 1px solid rgba(121, 121, 121, 0.74);
+  padding: 3vw;
+  border-radius: 8px;
+}
+
+section.form h2 {
+  margin: 10px 0;
+}
+section.form h2 span {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+section.form div.check {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+section.form div.check p {
+  border-right: 1px solid black;
+}
+
+section.form form div.formulario {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+section.form form input,
+select {
+  border: none;
+  background: white;
+}
+
+p button {
+  text-align: center;
+}
+
+button {
+  border: none;
+  background-color: rgb(218, 55, 96);
+  color: white;
+}
+
+ul li {
+  color: gray;
+  text-decoration: underline;
+}
