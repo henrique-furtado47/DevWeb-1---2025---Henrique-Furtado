@@ -70,12 +70,12 @@
                 <span id="taxa_limpeza">R$120</span>
               </li>
               <li>
-                <span id="taxa_servico">R$468</span>
+                <span id="taxa_servico">R$0</span>
               </li>
             </ul>
           </div>
           <hr />
-          <p>Total sem impostos: <span id="total">R$588</span></p>
+          <p>Total sem impostos: <span id="total">R$0</span></p>
         </div>
       </section>
       <script>
@@ -87,13 +87,14 @@
           let data_entrada = new Date(document.getElementById("checkin").value);
           let diarias = (data_saida - data_entrada) / 86400000;
           let subtotal = document.getElementById("subtotal");
+          let hospedes = document.getElementById("hospede").value;
 
           let noite = document.getElementById("valor_noite");
           let valor_noite = parseFloat(noite.innerText.substring(2));
 
           subtotal.innerText = "R$" + valor_noite + " X " + diarias + " noites";
 
-          let valorsub = valor_noite * diarias;
+          let valorsub = valor_noite * diarias + (hospedes - 1) * 0.2;
           let taxa_servico = valorsub * 0.15;
 
           let taxa_servicohtml = document.getElementById("taxa_servico");
@@ -104,7 +105,7 @@
           console.log(valor_limpeza);
 
           let valorsubhtml = document.getElementById("valorsub");
-          valorsubhtml.innerText = "R$" + valor_noite * diarias;
+          valorsubhtml.innerText = "R$" + valorsub;
 
           let total = valorsub + valor_limpeza + taxa_servico;
           let totalhtml = document.getElementById("total");
