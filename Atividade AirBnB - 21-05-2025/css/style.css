@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #252525;
+  background-color: #a89999;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -11,13 +11,13 @@ body {
 section {
   width: 20%;
   background-color: white;
-  border-radius: 10px;
-  padding: 25px;
-  margin: 10%;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 15vw;
 }
 
 section h1 {
-  padding: 10px 0 35px;
+  padding: 10px 0 40px;
 }
 
 div.datas {
@@ -25,7 +25,7 @@ div.datas {
 }
 
 label {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   padding: 0 0 0 10px;
 }
 
@@ -42,9 +42,9 @@ div.datas div {
 }
 
 div.hospedes {
-  width: 98.5%;
+  width: 98%;
   border-top: solid 1px black;
-  padding: 3px;
+  padding: 5px;
 }
 
 select {
@@ -54,11 +54,6 @@ select {
   padding: 10px;
   font-size: 0.7rem;
 }
-
-.esq {
-  border-right: solid 1px black;
-}
-
 div.todos {
   border: solid 1px black;
   border-radius: 10px;
@@ -66,7 +61,7 @@ div.todos {
 
 span.pequeno {
   margin: 0 5px;
-  color: #252525;
+  color: #141414;
   font-size: 0.8rem;
 }
 
@@ -76,24 +71,33 @@ div.listas {
 }
 
 div.results {
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 ul {
   margin: 0 10% 0 0;
 }
 
-li {
+ul li span {
   font-size: 0.8rem;
   margin: 10px 0;
+  color: gray;
+  text-decoration: underline;
+}
+
+ul.valores li span {
+  margin: 10px 0;
+  font-size: 0.8rem;
+  color: black;
+  text-decoration: none;
 }
 button {
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: deeppink;
+  background-color: rgb(228, 49, 144);
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-radius: 10px;
   margin: 15px 0;
 }
