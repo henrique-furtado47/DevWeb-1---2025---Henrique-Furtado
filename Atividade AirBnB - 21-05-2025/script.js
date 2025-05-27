@@ -20,7 +20,7 @@ function calcular() {
   subtotal.innerText =
     "R$" + valor_noite.toFixed(2) + " X " + diarias + " noites";
 
-  let valorsub = valor_noite * diarias + (hospedes - 1) * 0.2;
+  let valorsub = valor_noite * (1 + 0.2 * (hospedes - 1)) * diarias;
   let taxa_servico = valorsub * 0.15;
 
   let taxa_servicohtml = document.getElementById("taxa_servico");
