@@ -8,24 +8,27 @@ let cronometro;
 const relogio = document.getElementById("contador");
 const mensagem = document.getElementById("variavel");
 const botoes = document.querySelectorAll(".numero");
+const botao_reiniciar = document.getElementById("restart");
 
 console.log(tempoRestante);
 
 botoes.forEach((botao) => {
   botao.addEventListener("click", () => {
     if (tempoRestante === 30) {
-      inciarCronometro(velocidade);
+      inciarCronometro();
     }
     const numeroClicado = parseInt(botao.textContent);
-    verificarTentativa(numeroClicado);
-    if (acertos < 3) {
+    if (acertos < 3 && tempoRestante > 0) {
       document.getElementById("interrogacao").innerText = numeroClicado;
     }
+    verificarTentativa(numeroClicado);
   });
 });
 
+botao_reiniciar.addEventListener("click", reiniciarJogo);
+
 function verificarTentativa(numero) {
-  if (acertos < 3) {
+  if (acertos < 3 && tempoRestante > 0) {
     if (numero === numeroSorteado) {
       mensagem.innerText = "Você acertou o número!";
       acertos++;
@@ -81,4 +84,16 @@ function atualizarTempo() {
   } else {
     relogio.innerText = "0" + tempoRestante;
   }
+}
+
+function reiniciarJogo() {
+  clearInterval(cronometro);
+  acertos = 0;
+  numeroSorteado = Math.floor(Math.random() * 10);
+  tempoRestante = 30;
+  velocidade = 1000;
+  document.getElementById("interrogacao").innerText = "?";
+  mensagem.innerText = "";
+  atualizarTempo();
+  iniciarCronometro();
 }
