@@ -77,3 +77,24 @@ button.numero:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #ffcc00;
 }
+
+button.reiniciar {
+  font-size: 18px;
+  padding: 14px;
+  border-radius: 5px;
+  border: 2px solid #ff7300;
+  background-color: #000;
+  color: #ff7300;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 0 5px #ff7300;
+  font-family: "Press Start 2P", cursive;
+  margin: 20px 0;
+}
+
+button.reiniciar:hover {
+  background-color: #ff7300;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff7300;
+}
