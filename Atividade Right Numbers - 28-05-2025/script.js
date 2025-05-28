@@ -18,43 +18,49 @@ botoes.forEach((botao) => {
     }
     const numeroClicado = parseInt(botao.textContent);
     verificarTentativa(numeroClicado);
-    document.getElementById("interrogacao").innerText = numeroClicado;
+    if (acertos < 3) {
+      document.getElementById("interrogacao").innerText = numeroClicado;
+    }
   });
 });
 
 function verificarTentativa(numero) {
-  if (numero === numeroSorteado) {
-    mensagem.innerText = "Você acertou o número!";
-    acertos++;
-    if (acertos === 3) {
-      mensagem.innerText = "Parabéns, você venceu!";
+  if (acertos < 3) {
+    if (numero === numeroSorteado) {
+      mensagem.innerText = "Você acertou o número!";
+      acertos++;
+      if (acertos >= 3) {
+        mensagem.innerText = "Parabéns, você venceu!";
+      } else {
+        numeroSorteado = Math.floor(Math.random() * 10);
+        console.log(numeroSorteado);
+      }
     } else {
-      numeroSorteado = Math.floor(Math.random() * 10);
-      console.log(numeroSorteado);
-    }
-  } else {
-    if (numero > numeroSorteado) {
-      mensagem.innerText = "O numéro é menor";
-      velocidade -= 150;
-      acelerarCronometro();
-    }
-    if (numero < numeroSorteado) {
-      mensagem.innerText = "O número é maior";
-      velocidade -= 150;
-      acelerarCronometro();
+      if (numero > numeroSorteado) {
+        mensagem.innerText = "O numéro é menor";
+        velocidade -= 150;
+        acelerarCronometro();
+      }
+      if (numero < numeroSorteado) {
+        mensagem.innerText = "O número é maior";
+        velocidade -= 150;
+        acelerarCronometro();
+      }
     }
   }
 }
 
 function inciarCronometro() {
   cronometro = setInterval(() => {
-    if (tempoRestante > 0) {
+    if (tempoRestante > 0 && acertos < 3) {
       tempoRestante--;
       atualizarTempo();
       console.log(velocidade);
     } else {
       if (acertos < 3) {
         mensagem.innerText = "Você perdeu";
+      } else {
+        tempoRestante = tempoRestante;
       }
     }
   }, velocidade);
