@@ -52,15 +52,13 @@ function verificarTentativa(numero) {
       }
     } else {
       somErro.cloneNode().play();
+      velocidade -= 150;
+      acelerarCronometro();
       if (numero > numeroSorteado) {
         mensagem.innerText = "O numéro é menor";
-        velocidade -= 150;
-        acelerarCronometro();
       }
       if (numero < numeroSorteado) {
         mensagem.innerText = "O número é maior";
-        velocidade -= 150;
-        acelerarCronometro();
       }
     }
   }
