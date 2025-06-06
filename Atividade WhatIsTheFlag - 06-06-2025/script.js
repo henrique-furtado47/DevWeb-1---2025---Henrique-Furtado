@@ -1,3 +1,5 @@
+let tempoRestante = 30;
+
 const paises = [
   {
     nome: "Chile",
@@ -354,10 +356,13 @@ const paises = [
 let perguntaAtual;
 let acertos = 0;
 
+const relogio = document.getElementById("contador");
+
 function iniciarJogo() {
   document.getElementById("tela-inicial").classList.remove("ativa");
   document.getElementById("tela-jogo").classList.add("ativa");
   novaPergunta();
+  inciarCronometro();
 }
 
 function novaPergunta() {
@@ -419,4 +424,30 @@ function shuffleArray(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
+}
+
+function atualizarTempo() {
+  if (tempoRestante >= 10) {
+    relogio.innerText = tempoRestante;
+  } else {
+    relogio.innerText = "0" + tempoRestante;
+  }
+}
+
+function inciarCronometro() {
+  cronometro = setInterval(() => {
+    if (tempoRestante > 0 && acertos < 3) {
+      tempoRestante--;
+      atualizarTempo();
+      console.log(1000);
+    } else {
+      if (acertos < 3) {
+        somDerrota.play();
+        mensagem.innerText = "Você perdeu";
+      } else {
+        tempoRestante = tempoRestante;
+      }
+    }
+  }, 1000);
+  console.log(1000);
 }
