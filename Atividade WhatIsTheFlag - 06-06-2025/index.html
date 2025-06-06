@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Países</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- TELA INICIAL -->
+    <section id="tela-inicial" class="tela ativa">
+      <h1>🌍 Desafio dos Países</h1>
+      <p>Descubra o idioma, a moeda ou o continente de cada país!</p>
+      <button class="botao" onclick="iniciarJogo()">Começar Jogo</button>
+    </section>
+
+    <!-- TELA DO JOGO -->
+    <section id="tela-jogo" class="tela">
+      <div class="cabecalho">
+        <p>00:<span id="contador">30</span></p>
+        <button id="btn-som">🔊</button>
+      </div>
+
+      <div class="pergunta">
+        <h2 id="pergunta-texto">Qual país fala "espanhol"?</h2>
+      </div>
+
+      <div class="opcoes-grid" id="opcoes">
+        <!-- Bandeiras são carregadas aqui via JS -->
+      </div>
+
+      <div class="pontuacao">Acertos: <span id="acertos">0</span> / 3</div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

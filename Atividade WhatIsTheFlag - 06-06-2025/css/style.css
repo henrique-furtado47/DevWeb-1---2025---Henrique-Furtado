@@ -1,0 +1,77 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #74ebd5, #acb6e5);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.tela {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  text-align: center;
+}
+
+.tela.ativa {
+  display: flex;
+}
+
+.botao {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cabecalho {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.pergunta h2 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.opcoes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.opcao-img {
+  width: 100%;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.opcao-img:hover {
+  transform: scale(1.05);
+  border-color: #4caf50;
+}
+
+.pontuacao {
+  font-size: 18px;
+  margin-top: 10px;
+}
