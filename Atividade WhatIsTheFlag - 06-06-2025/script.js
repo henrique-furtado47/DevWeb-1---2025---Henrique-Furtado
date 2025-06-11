@@ -1,5 +1,3 @@
-let tempoRestante = 30;
-
 const paises = [
   {
     nome: "Chile",
@@ -355,18 +353,19 @@ const paises = [
 
 let perguntaAtual;
 let acertos = 0;
+let tempoRestante = 30;
 
 const relogio = document.getElementById("contador");
 
 function iniciarJogo() {
-  document.getElementById("tela-inicial").classList.remove("ativa");
+  tempoRestante = 30;
+  document.querySelector(".tela.ativa").classList.remove("ativa");
   document.getElementById("tela-jogo").classList.add("ativa");
   novaPergunta();
   inciarCronometro();
 }
 
 function novaPergunta() {
-  acertos = 0;
   document.getElementById("acertos").textContent = acertos;
 
   const tipos = ["idioma", "moeda", "continente"];
@@ -380,7 +379,7 @@ function novaPergunta() {
   shuffleArray(paisesCorretos);
   shuffleArray(paisesErrados);
 
-  const opcoes = [...paisesCorretos.slice(0, 3), ...paisesErrados.slice(0, 3)];
+  const opcoes = [...paisesCorretos.slice(0, 1), ...paisesErrados.slice(0, 5)];
   shuffleArray(opcoes);
 
   // Atualiza texto da pergunta
@@ -410,12 +409,13 @@ function novaPergunta() {
 }
 
 function verificarResposta(pais, corretos) {
-  if (corretos.includes(pais.nome)) {
+  if (corretos.includes(pais.nome) && acertos < 2) {
     acertos++;
     document.getElementById("acertos").textContent = acertos;
-    if (acertos === corretos.length) {
-      setTimeout(novaPergunta, 1000);
-    }
+    novaPergunta();
+  } else if (acertos >= 2) {
+    document.getElementById("tela-jogo").classList.remove("ativa");
+    document.getElementById("tela-vitoria").classList.add("ativa");
   }
 }
 
@@ -431,6 +431,10 @@ function atualizarTempo() {
     relogio.innerText = tempoRestante;
   } else {
     relogio.innerText = "0" + tempoRestante;
+  }
+  if (tempoRestante <= 0 && acertos < 3) {
+    document.getElementById("tela-jogo").classList.remove("ativa");
+    document.getElementById("tela-derrota").classList.add("ativa");
   }
 }
 
