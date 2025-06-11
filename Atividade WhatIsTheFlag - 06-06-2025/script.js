@@ -358,7 +358,7 @@ let tempoRestante = 30;
 const relogio = document.getElementById("contador");
 
 function iniciarJogo() {
-  tempoRestante = 30;
+  tempoRestante = 31;
   acertos = 0;
   document.querySelector(".tela.ativa").classList.remove("ativa");
   document.getElementById("tela-jogo").classList.add("ativa");
