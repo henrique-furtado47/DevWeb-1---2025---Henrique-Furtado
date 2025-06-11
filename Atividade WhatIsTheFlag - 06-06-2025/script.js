@@ -359,6 +359,7 @@ const relogio = document.getElementById("contador");
 
 function iniciarJogo() {
   tempoRestante = 30;
+  acertos = 0;
   document.querySelector(".tela.ativa").classList.remove("ativa");
   document.getElementById("tela-jogo").classList.add("ativa");
   novaPergunta();
@@ -415,6 +416,8 @@ function verificarResposta(pais, corretos) {
     novaPergunta();
   } else if (acertos >= 2) {
     document.getElementById("tela-jogo").classList.remove("ativa");
+    clearInterval(cronometro);
+    tempoRestante = 20000;
     document.getElementById("tela-vitoria").classList.add("ativa");
   }
 }
@@ -433,7 +436,10 @@ function atualizarTempo() {
     relogio.innerText = "0" + tempoRestante;
   }
   if (tempoRestante <= 0 && acertos < 3) {
+    clearInterval(cronometro);
     document.getElementById("tela-jogo").classList.remove("ativa");
+    clearInterval(cronometro);
+    tempoRestante = 20000;
     document.getElementById("tela-derrota").classList.add("ativa");
   }
 }
