@@ -355,15 +355,26 @@ let perguntaAtual;
 let acertos = 0;
 let tempoRestante = 30;
 
+const somAcerto = new Audio("src/audio/right.wav");
+const somErro = new Audio("src/audio/wrong.mp3");
+const somVitoria = new Audio("src/audio/victory.mp3");
+const somDerrota = new Audio("src/audio/gameover.wav");
+const somRestart = new Audio("src/audio/restart.mp3");
+const musicaFundo = new Audio("src/audio/musicaFundo.mp3");
+
+const botaoSom = document.getElementById("btn-som");
+console.log(botaoSom);
 const relogio = document.getElementById("contador");
 
 function iniciarJogo() {
+  somRestart.play();
   tempoRestante = 31;
   acertos = 0;
   document.querySelector(".tela.ativa").classList.remove("ativa");
   document.getElementById("tela-jogo").classList.add("ativa");
   novaPergunta();
   inciarCronometro();
+  musicaFundo.play();
 }
 
 function novaPergunta() {
@@ -382,7 +393,6 @@ function novaPergunta() {
 
   const opcoes = [...paisesCorretos.slice(0, 1), ...paisesErrados.slice(0, 5)];
   shuffleArray(opcoes);
-
   // Atualiza texto da pergunta
   let textoPergunta = "";
   if (tipo === "idioma") {
@@ -410,15 +420,22 @@ function novaPergunta() {
 }
 
 function verificarResposta(pais, corretos) {
-  if (corretos.includes(pais.nome) && acertos < 2) {
-    acertos++;
-    document.getElementById("acertos").textContent = acertos;
-    novaPergunta();
-  } else if (acertos >= 2) {
-    document.getElementById("tela-jogo").classList.remove("ativa");
-    clearInterval(cronometro);
-    tempoRestante = 20000;
-    document.getElementById("tela-vitoria").classList.add("ativa");
+  if (corretos.includes(pais.nome)) {
+    if (acertos < 2) {
+      somAcerto.play();
+      acertos++;
+      document.getElementById("acertos").textContent = acertos;
+      novaPergunta();
+    } else {
+      musicaFundo.pause();
+      somVitoria.play();
+      document.getElementById("tela-jogo").classList.remove("ativa");
+      clearInterval(cronometro);
+      tempoRestante = 20000;
+      document.getElementById("tela-vitoria").classList.add("ativa");
+    }
+  } else {
+    somErro.play();
   }
 }
 
@@ -436,6 +453,8 @@ function atualizarTempo() {
     relogio.innerText = "0" + tempoRestante;
   }
   if (tempoRestante <= 0 && acertos < 3) {
+    musicaFundo.pause();
+    somDerrota.play();
     clearInterval(cronometro);
     document.getElementById("tela-jogo").classList.remove("ativa");
     clearInterval(cronometro);
@@ -461,3 +480,19 @@ function inciarCronometro() {
   }, 1000);
   console.log(1000);
 }
+
+let somAtivo = true;
+
+const todosOsSons = [somAcerto, somErro, somVitoria, somDerrota, musicaFundo];
+
+const botaoMute = document.getElementById("btnMute");
+
+botaoMute.addEventListener("click", () => {
+  somAtivo = !somAtivo;
+
+  todosOsSons.forEach((som) => {
+    som.volume = somAtivo ? 1 : 0;
+  });
+
+  botaoMute.textContent = somAtivo ? "🔈 Som: Ligado" : "🔇 Som: Mutado";
+});
