@@ -1,35 +1,33 @@
-@import './base.css';
+@import './reset.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* ============================================================================================
+                                GERAL   
+   ============================================================================================                            
+*/
+html {
+  font-size: calc(15px + 0.390625vw);
 }
 
-a,
-.green {
+body {
+  color: #21243d;
+  font-family:
+    'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  color: #21243d;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+p {
+  line-height: 130%;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+section h2 {
+  text-align: center;
+  margin: 5px;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+img {
+  max-width: 100%;
 }
