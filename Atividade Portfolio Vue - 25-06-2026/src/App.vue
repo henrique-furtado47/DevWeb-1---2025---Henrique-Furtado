@@ -1,19 +1,13 @@
 <script setup>
 //import { RouterLink, RouterView } from 'vue-router'
 //import HelloWorld from './components/HelloWorld.vue'
+import HeaderPortfolio from './components/HeaderPortfolio.vue'
+import FooterPortfolio from './components/FooterPortfolio.vue'
 </script>
 
 <template>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Blog</a></li>
-          <li><a href="ft-works.html">Works</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <HeaderPortfolio> </HeaderPortfolio>
     <main>
       <section class="banner">
         <div class="imagem">
@@ -81,41 +75,11 @@
         </ul>
       </section>
     </main>
-    <footer>
-      <p>
-        <a href="#"><span class="fa-brands fa-square-facebook"></span></a>
-        <a href="#"><span class="fa-brands fa-instagram"></span></a>
-        <a href="#"><span class="fa-brands fa-twitter"></span></a>
-        <a href="#"><span class="fa-brands fa-linkedin"></span></a>
-      </p>
-      <p>Copyright ©2020 All rights reserved</p>
-    </footer>
+    <FooterPortfolio></FooterPortfolio>
   </body>
 </template>
 
 <style scoped>
-/* ============================================================================================
-FOOTER E HEADER   
-============================================================================================                            
-*/
-
-header ul li {
-  text-align: center;
-  padding: 10px 0 10px 0;
-}
-
-footer {
-  text-align: center;
-}
-
-footer a {
-  font-size: 2.3rem;
-  margin: 20px 15px;
-}
-
-footer p {
-  margin: 15px 0 15px;
-}
 /* ============================================================================================
 ESPECÍFICO   
 ============================================================================================                            
@@ -241,15 +205,6 @@ section.dashb ul li p.info span {
 ============================================================================================                            
 */
 @media (min-width: 900px) {
-  header ul {
-    display: flex;
-    justify-content: right;
-  }
-
-  header ul li {
-    margin: 0px 20px 0px 20px;
-  }
-
   section h2 {
     text-align: left;
     font-size: 1.5rem;
