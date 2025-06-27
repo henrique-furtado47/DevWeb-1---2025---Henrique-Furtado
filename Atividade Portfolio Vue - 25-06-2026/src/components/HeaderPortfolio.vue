@@ -1,11 +1,13 @@
-<script></script>
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
 <template>
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Blog</a></li>
-        <li><a href="ft-works.html">Works</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><RouterLink to="/">Blog</RouterLink></li>
+        <li><RouterLink to="/works">Works</RouterLink></li>
+        <li><RouterLink to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
   </header>
@@ -14,6 +16,7 @@
 header ul li {
   text-align: center;
   padding: 10px 0 10px 0;
+  margin: 0px 20px 0px 20px;
 }
 @media (min-width: 900px) {
   header ul {
@@ -22,7 +25,7 @@ header ul li {
   }
 
   header ul li {
-    margin: 0px 20px 0px 20px;
+    padding: 20px 0 20px 0;
   }
 }
 </style>
