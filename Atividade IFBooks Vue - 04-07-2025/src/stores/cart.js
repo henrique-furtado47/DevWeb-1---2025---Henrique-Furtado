@@ -8,9 +8,13 @@ export const useCartStore = defineStore('cart', () => {
   })
 
   function addBook(book) {
-    console.log(book)
+    let items = cart.value.items
+    if (!items.includes(book)) {
+      items.push(book)
+      cart.value.total += book.price
+      console.log(cart.value)
+    }
   }
 
   return { cart, addBook }
 })
-
