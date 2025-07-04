@@ -1,5 +1,8 @@
 <script setup>
 import { useBooksStore } from '@/stores/books'
+import { useCartStore } from '@/stores/cart'
+
+const cartStore = useCartStore()
 const booksStore = useBooksStore()
 </script>
 
@@ -47,7 +50,9 @@ const booksStore = useBooksStore()
           <span class="price-and-like"
             ><p class="book-price">R$ {{ book.price.toFixed(2) }}</p>
             <span class="mdi mdi-heart-outline"></span></span
-          ><button><span class="mdi mdi-cart"></span>Comprar</button>
+          ><button @click="cartStore.addBook(book)">
+            <span class="mdi mdi-cart"></span>Comprar
+          </button>
         </li>
       </ul>
     </section>
