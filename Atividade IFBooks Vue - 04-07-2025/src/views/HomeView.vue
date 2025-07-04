@@ -1,4 +1,6 @@
 <script setup>
+import { useBooksStore } from '@/stores/books'
+const booksStore = useBooksStore()
 </script>
 
 <template>
@@ -38,93 +40,14 @@
 
     <section class="books">
       <ul>
-        <li class="book">
-          <img src="/covers/comigo-na-livraria.png" alt="Comigo na livraria" />
-          <h2 >Comigo na livraria</h2>
-          <p  class="book-author">Martha Medeiros</p>
-          <span  class="price-and-like"
-            ><p  class="book-price">R$ 23.24</p>
-            <span  class="mdi mdi-heart-outline"></span></span
-          ><button >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
-        </li>
-        <li  class="book">
-          <img  src="/covers/quincas-borba.png" alt="Quincas Borba" />
-          <h2 >Quincas Borba</h2>
-          <p  class="book-author">Machado de Assis</p>
-          <span  class="price-and-like"
-            ><p  class="book-price">R$ 23.24</p>
-            <span  class="mdi mdi-heart-outline"></span></span
-          ><button >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
-        </li>
-        <li  class="book">
-          <img  src="/covers/a-livraria.png" alt="A livraria" />
-          <h2 >A livraria</h2>
-          <p  class="book-author">Penelope Fitzgerald</p>
-          <span  class="price-and-like"
-            ><p  class="book-price">R$ 13.94</p>
-            <span  class="mdi mdi-heart-outline"></span></span
-          ><button >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
-        </li>
-        <li  class="book">
-          <img  src="/covers/a-hora-da-estrela.png" alt="A hora da estrela" />
-          <h2 >A hora da estrela</h2>
-          <p  class="book-author">Clarice Lispector</p>
-          <span  class="price-and-like"
-            ><p  class="book-price">R$ 16.84</p>
-            <span  class="mdi mdi-heart-outline"></span></span
-          ><button >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
-        </li>
-        <li  class="book">
-          <img  src="/covers/o-alienista.png" alt="O alienista" />
-          <h2 >O alienista</h2>
-          <p  class="book-author">Machado de Assis</p>
-          <span  class="price-and-like"
-            ><p  class="book-price">R$ 266.92</p>
-            <span  class="mdi mdi-heart-outline"></span></span
-          ><button >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
-        </li>
-        <li  class="book">
-          <img  src="/covers/mar-morto.png" alt="Mar morto" />
-          <h2 >Mar morto</h2>
-          <p  class="book-author">Jorge Amado</p>
-          <span  class="price-and-like"
-            ><p  class="book-price">R$ 13.95</p>
-            <span  class="mdi mdi-heart-outline"></span></span
-          ><button >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
-        </li>
-        <li  class="book">
-          <img  src="/covers/grande-sertao-veredas.png" alt="Grande sertão" />
-          <h2 >Grande sertão</h2>
-          <p  class="book-author">Guimarães Rosa</p>
-          <span  class="price-and-like"
-            ><p  class="book-price">R$ 26.04</p>
-            <span  class="mdi mdi-heart-outline"></span></span
-          ><button >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
-        </li>
-        <li  class="book">
-          <img  src="/covers/flor-de-poema.png" alt="Flor de poemas" />
-          <h2 >Flor de poemas</h2>
-          <p  class="book-author">Cecília Meireles</p>
-          <span  class="price-and-like"
-            ><p  class="book-price">R$ 15.81</p>
-            <span  class="mdi mdi-heart-outline"></span></span
-          ><button >
-            <span  class="mdi mdi-cart"></span>Comprar
-          </button>
+        <li class="book" v-for="book in booksStore.books" :key="book.id">
+          <img :src="book.cover" alt="{{ book.title }}" />
+          <h2>{{ book.title }}</h2>
+          <p class="book-author">{{ book.author }}</p>
+          <span class="price-and-like"
+            ><p class="book-price">R$ {{ book.price.toFixed(2) }}</p>
+            <span class="mdi mdi-heart-outline"></span></span
+          ><button><span class="mdi mdi-cart"></span>Comprar</button>
         </li>
       </ul>
     </section>
