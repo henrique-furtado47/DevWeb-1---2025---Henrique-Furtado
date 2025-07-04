@@ -12,7 +12,6 @@ export const useCartStore = defineStore('cart', () => {
     if (!items.includes(book)) {
       items.push(book)
       cart.value.total += book.price
-      console.log(cart.value)
     }
   }
 
