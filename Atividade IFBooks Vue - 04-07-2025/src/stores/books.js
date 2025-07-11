@@ -9,6 +9,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/comigo-na-livraria.png',
       price: 23.24,
       author: 'Martha Medeiros',
+      quantity: 0,
     },
     {
       id: 2,
@@ -16,6 +17,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/quincas-borba.png',
       price: 23.24,
       author: 'Machado de Assis',
+      quantity: 0,
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/a-livraria.png',
       price: 13.94,
       author: 'Penelope Fitzgerald',
+      quantity: 0,
     },
     {
       id: 4,
@@ -30,6 +33,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/a-hora-da-estrela.png',
       price: 16.84,
       author: 'Clarice Lispector',
+      quantity: 0,
     },
     {
       id: 5,
@@ -37,6 +41,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/o-alienista.png',
       price: 266.92,
       author: 'Machado de Assis',
+      quantity: 0,
     },
     {
       id: 6,
@@ -44,6 +49,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/mar-morto.png',
       price: 13.95,
       author: 'Jorge Amado',
+      quantity: 0,
     },
     {
       id: 7,
@@ -51,6 +57,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/grande-sertao-veredas.png',
       price: 26.04,
       author: 'Guimarães Rosa',
+      quantity: 0,
     },
     {
       id: 8,
@@ -58,6 +65,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/flor-de-poema.png',
       price: 15.81,
       author: 'Cecília Meireles',
+      quantity: 0,
     },
     {
       id: 9,
@@ -65,6 +73,7 @@ export const useBooksStore = defineStore('books', () => {
       cover: '/covers/dois-mundos-um-heroi.png',
       price: 64.9,
       author: 'Rezendeevil',
+      quantity: 0,
     },
   ])
 
