@@ -1,13 +1,13 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { useCartStore } from '@/stores/cart'
+import { RouterLink } from "vue-router";
+import { useCartStore } from "@/stores/cart";
 
-const cartStore = useCartStore()
+const cartStore = useCartStore();
 </script>
 
 <template>
   <main>
-    <section class="cart" v-if="cartStore.cart.items.length > 0">
+    <section class="cart">
       <h2>Carrinho</h2>
       <table>
         <thead>
@@ -18,6 +18,9 @@ const cartStore = useCartStore()
           </tr>
         </thead>
         <tbody>
+          <p class="aviso" v-if="cartStore.cart.items.length <= 0">
+            Você não adicionou nada ao carrinho.
+          </p>
           <tr v-for="book in cartStore.cart.items" :key="book.id">
             <td class="cart-item">
               <img :src="book.cover" alt="{{book.title}}" />
@@ -29,18 +32,29 @@ const cartStore = useCartStore()
             </td>
             <td>
               <div class="cart-item-quantity">
-                <button @click='cartStore.decrementBookToCart(book)' class="plain"><span class="mdi mdi-minus"></span></button> {{ book.quantity }}
-                <button @click="cartStore.incrementBookToCart(book)" class="plain"><span class="mdi mdi-plus"></span></button>
+                <button @click="cartStore.decrementBookToCart(book)" class="plain">
+                  <span class="mdi mdi-minus"></span>
+                </button>
+                {{ book.quantity }}
+                <button @click="cartStore.incrementBookToCart(book)" class="plain">
+                  <span class="mdi mdi-plus"></span>
+                </button>
               </div>
             </td>
-            <td class="cart-item-subtotal">{{ (book.price*book.quantity).toFixed(2) }}</td>
+            <td class="cart-item-subtotal">
+              {{ (book.price * book.quantity).toFixed(2) }}
+            </td>
           </tr>
         </tbody>
       </table>
-      <router-link to='/'> <button class="outlined">Voltar para loja</button></router-link>
+      <router-link to="/">
+        <button class="outlined">Voltar para loja</button></router-link
+      >
       <div class="cart-summary">
         <div class="cupom">
-          <input type="text" placeholder="Código do cupom" /><button>Inserir cupom</button>
+          <input type="text" placeholder="Código do cupom" /><button>
+            Inserir cupom
+          </button>
         </div>
         <div class="summary">
           <h2>Total da Compra</h2>
@@ -53,14 +67,16 @@ const cartStore = useCartStore()
         </div>
       </div>
     </section>
-    <section v-else>
-    <h1>Carrinho vazio</h1>
-    <router-link to='/'> <button class="outlined">Voltar para loja</button></router-link>
-    </section>
   </main>
 </template>
 
 <style>
+p.aviso {
+  font-size: 1.2rem;
+  color: #27ae60;
+  margin: 30px 0;
+}
+
 .cart {
   display: flex;
   flex-direction: column;
