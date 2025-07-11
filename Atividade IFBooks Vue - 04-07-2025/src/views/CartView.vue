@@ -7,7 +7,7 @@ const cartStore = useCartStore()
 
 <template>
   <main>
-    <section class="cart">
+    <section class="cart" v-if="cartStore.cart.items.length > 0">
       <h2>Carrinho</h2>
       <table>
         <thead>
@@ -52,6 +52,10 @@ const cartStore = useCartStore()
           <button>Ir para pagamento</button>
         </div>
       </div>
+    </section>
+    <section v-else>
+    <h1>Carrinho vazio</h1>
+    <router-link to='/'> <button class="outlined">Voltar para loja</button></router-link>
     </section>
   </main>
 </template>
