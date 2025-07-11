@@ -9,11 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <router-link to="/">
           IFbooks
           <span class="logo-title"> Apreço a livros </span>
-<<<<<<< HEAD
         </router-link> 
-=======
-        </router-link>
->>>>>>> 464fa1ee00f58ccd427f2625abfa8399c46493cf
       </h1>
       <div class="search-wrapper">
         <input type="text" class="search" placeholder="Buscar..." />
