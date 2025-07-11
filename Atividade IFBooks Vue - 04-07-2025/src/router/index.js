@@ -17,6 +17,39 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/CartView.vue'),
     },
+        {
+      path: '/termos',
+      name: 'termos',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/TermosView.vue'),
+    },
+        {
+      path: '/envio',
+      name: 'envio',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/EnvioView.vue'),
+    },
+        {
+      path: '/equipe',
+      name: 'equipe',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/EquipeView.vue'),
+    },
+        {
+      path: '/devolucoes',
+      name: 'devolucoes',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/DevolucoesView.vue'),
+    },
+
   ],
 })
 

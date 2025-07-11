@@ -1,29 +1,36 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-<header>
+  <header>
     <nav>
       <h1>
         <router-link to="/">
           IFbooks
           <span class="logo-title"> Apreço a livros </span>
+<<<<<<< HEAD
         </router-link> 
+=======
+        </router-link>
+>>>>>>> 464fa1ee00f58ccd427f2625abfa8399c46493cf
       </h1>
       <div class="search-wrapper">
         <input type="text" class="search" placeholder="Buscar..." />
       </div>
       <ul>
-        <li>Termos</li>
-        <li>Equipe</li>
-        <li>Envio</li>
-        <li>Devoluções</li>
+        <li>
+          <router-link to="/termos">Termos</router-link>
+        </li>
+        <li>
+          <router-link to="/equipe">Equipe</router-link>
+        </li>
+        <li><router-link to="/envio">Envio</router-link></li>
+        <li><router-link to="/devolucoes">Devoluções</router-link></li>
       </ul>
       <ul class="icons">
         <li>
           <router-link to="/cart"><span class="mdi mdi-cart"></span></router-link>
-
         </li>
         <li><span class="mdi mdi-heart"></span></li>
         <li><span class="mdi mdi-account"></span></li>
