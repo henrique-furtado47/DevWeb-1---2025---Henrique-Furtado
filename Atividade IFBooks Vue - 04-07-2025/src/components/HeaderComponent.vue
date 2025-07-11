@@ -6,10 +6,10 @@ import { RouterLink } from 'vue-router'
 <header>
     <nav>
       <h1>
-        <a href="#">
+        <router-link to="/">
           IFbooks
           <span class="logo-title"> Apreço a livros </span>
-        </a>
+        </router-link> 
       </h1>
       <div class="search-wrapper">
         <input type="text" class="search" placeholder="Buscar..." />
