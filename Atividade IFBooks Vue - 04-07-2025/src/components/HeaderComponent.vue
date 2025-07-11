@@ -36,6 +36,17 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <style scoped>
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  text-decoration: underline;
+  color:rgb(41, 39, 39)
+}
+
 header nav {
   display: flex;
   justify-content: space-between;
