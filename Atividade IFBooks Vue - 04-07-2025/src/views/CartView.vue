@@ -29,15 +29,15 @@ const cartStore = useCartStore()
             </td>
             <td>
               <div class="cart-item-quantity">
-                <button class="plain"><span class="mdi mdi-minus"></span></button> 1
-                <button class="plain"><span class="mdi mdi-plus"></span></button>
+                <button @click='cartStore.decrementBookToCart(book)' class="plain"><span class="mdi mdi-minus"></span></button> {{ book.quantity }}
+                <button @click="cartStore.incrementBookToCart(book)" class="plain"><span class="mdi mdi-plus"></span></button>
               </div>
             </td>
-            <td class="cart-item-subtotal">{{ book.price.toFixed(2) }}</td>
+            <td class="cart-item-subtotal">{{ (book.price*book.quantity).toFixed(2) }}</td>
           </tr>
         </tbody>
       </table>
-      <a href="/" class=""><button class="outlined">Voltar para loja</button></a>
+      <router-link to='/'> <button class="outlined">Voltar para loja</button></router-link>
       <div class="cart-summary">
         <div class="cupom">
           <input type="text" placeholder="Código do cupom" /><button>Inserir cupom</button>
