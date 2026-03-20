@@ -28,6 +28,11 @@ npm run dev
 npm run build
 ```
 
+### Build for GitHub Pages
+
+This app is configured with `base: '/DevWeb-1---2025---Henrique-Furtado/'` in `vite.config.js`.
+After publishing the `dist/` files to GitHub Pages for this repository, the main page and routes load correctly under the repository path.
+
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh

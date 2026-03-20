@@ -1,5 +1,5 @@
 <script setup>
-const repositoryRoot = '..'
+const repositoryRoot = '/DevWeb-1---2025---Henrique-Furtado'
 
 const projects = [
   { name: 'Atividade AirBnB - 21-05-2025', path: 'Atividade AirBnB - 21-05-2025/index.html' },
