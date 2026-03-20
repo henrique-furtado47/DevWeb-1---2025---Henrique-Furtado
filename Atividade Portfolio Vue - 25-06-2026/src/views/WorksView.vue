@@ -1,38 +1,40 @@
 <script setup>
+const repositoryRoot = '..'
+
 const projects = [
-  { name: 'Atividade AirBnB - 21-05-2025', href: '../Atividade AirBnB - 21-05-2025/index.html' },
+  { name: 'Atividade AirBnB - 21-05-2025', path: 'Atividade AirBnB - 21-05-2025/index.html' },
   {
     name: 'Atividade Animaneco - 02-04-2025',
-    href: '../Atividade Animaneco - 02-04-2025/index.html',
+    path: 'Atividade Animaneco - 02-04-2025/index.html',
   },
-  { name: 'Atividade Bullet - 28-03-2025', href: '../Atividade Bullet - 28-03-2025/index.html' },
-  { name: 'Atividade Duna - 19-03-2025', href: '../Atividade Duna - 19-03-2025/index.html' },
-  { name: 'Atividade Forms - 28-03-2025', href: '../Atividade Forms - 28-03-2025/index.html' },
+  { name: 'Atividade Bullet - 28-03-2025', path: 'Atividade Bullet - 28-03-2025/index.html' },
+  { name: 'Atividade Duna - 19-03-2025', path: 'Atividade Duna - 19-03-2025/index.html' },
+  { name: 'Atividade Forms - 28-03-2025', path: 'Atividade Forms - 28-03-2025/index.html' },
   {
     name: 'Atividade IFBooks Vue - 04-07-2025',
-    href: '../Atividade IFBooks Vue - 04-07-2025/index.html',
+    path: 'Atividade IFBooks Vue - 04-07-2025/index.html',
   },
-  { name: 'Atividade IFC - 26-03-2025', href: '../Atividade IFC - 26-03-2025/index.html' },
+  { name: 'Atividade IFC - 26-03-2025', path: 'Atividade IFC - 26-03-2025/index.html' },
   {
     name: 'Atividade Portfolio CSS - 04-04-2025',
-    href: '../Atividade Portfolio CSS - 04-04-2025/index.html',
+    path: 'Atividade Portfolio CSS - 04-04-2025/index.html',
   },
   {
     name: 'Atividade Right Numbers - 28-05-2025',
-    href: '../Atividade Right Numbers - 28-05-2025/index.html',
+    path: 'Atividade Right Numbers - 28-05-2025/index.html',
   },
-  { name: 'Atividade SoundMy - 23-04-2025', href: '../Atividade SoundMy - 23-04-2025/index.html' },
-  { name: 'Atividade Taxi - 30-04-2025', href: '../Atividade Taxi - 30-04-2025/index.html' },
+  { name: 'Atividade SoundMy - 23-04-2025', path: 'Atividade SoundMy - 23-04-2025/index.html' },
+  { name: 'Atividade Taxi - 30-04-2025', path: 'Atividade Taxi - 30-04-2025/index.html' },
   {
     name: 'Atividade ToDoList - 30-05-2025',
-    href: '../Atividade ToDoList - 30-05-2025/index.html',
+    path: 'Atividade ToDoList - 30-05-2025/index.html',
   },
   {
     name: 'Atividade WhatIsTheFlag - 06-06-2025',
-    href: '../Atividade WhatIsTheFlag - 06-06-2025/index.html',
+    path: 'Atividade WhatIsTheFlag - 06-06-2025/index.html',
   },
-  { name: 'Prova DevWeb 1 - 16-05-2025', href: '../Prova DevWeb 1 - 16-05-2025/index.html' },
-]
+  { name: 'Prova DevWeb 1 - 16-05-2025', path: 'Prova DevWeb 1 - 16-05-2025/index.html' },
+].map((project) => ({ ...project, href: `${repositoryRoot}/${project.path}` }))
 </script>
 <template>
   <main>
